@@ -1,0 +1,114 @@
+{ "frames": {
+   "hanna-sprite 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 1.aseprite": {
+    "frame": { "x": 47, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 2.aseprite": {
+    "frame": { "x": 94, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 3.aseprite": {
+    "frame": { "x": 141, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 4.aseprite": {
+    "frame": { "x": 188, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 5.aseprite": {
+    "frame": { "x": 235, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 6.aseprite": {
+    "frame": { "x": 282, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 7.aseprite": {
+    "frame": { "x": 329, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 8.aseprite": {
+    "frame": { "x": 376, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 9.aseprite": {
+    "frame": { "x": 423, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 10.aseprite": {
+    "frame": { "x": 470, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   },
+   "hanna-sprite 11.aseprite": {
+    "frame": { "x": 517, "y": 0, "w": 47, "h": 52 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 52 },
+    "sourceSize": { "w": 47, "h": 52 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.11",
+  "image": "hanna-sprite.png",
+  "format": "RGBA8888",
+  "size": { "w": 564, "h": 52 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Background Copy", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

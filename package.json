@@ -1,0 +1,19 @@
+{
+  "name": "hanna",
+  "version": "1.0.0",
+  "main": "src/index.html",
+  "author": "alexedev",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "lint": "tsc --noEmit",
+    "ship": "rm -rf dist && parcel build index.html --no-source-maps --public-url ./ && surge --domain https://hanna.surge.sh dist && rm -rf dist"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.3",
+    "phaser": "^3.17.0",
+    "ts-loader": "^6.0.1",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {}
+}
