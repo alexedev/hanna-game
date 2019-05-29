@@ -2,7 +2,6 @@ import Phaser from 'phaser';
 import hanna from '../../assets/sprites/hanna-sprite.png';
 import bluePotion from '../../assets/sprites/blue.png';
 import redPotion from '../../assets/sprites/red.png';
-import sky from '../../assets/images/sky.png';
 import platform from '../../assets/images/platform.png';
 import jump from '../../assets/audio/cyber-jump.mp3';
 import blueBlock from '../../assets/images/blue-block.png'
@@ -42,7 +41,7 @@ export default {
       frameHeight: 24,
       frameWidth: 24
     });
-    this.load.image('sky', sky);
+
     this.load.image('emptyBlock', emptyBlock);
     this.load.image('redBlockEmpty', redBlock);
     this.load.image('redBlockFull', redBlockFull);
@@ -54,8 +53,8 @@ export default {
   },
 
   create: function() {
-    this.redPotionsCollected = 0;
-    this.bluePotionsCollected = 0;
+    this.redPotionsCollected = 1;
+    this.bluePotionsCollected = 1;
     this.redPotionsUsed = 0;
     this.bluePotionsUsed = 0;
     this.score = 0;
@@ -81,14 +80,16 @@ export default {
     
     platforms.create(100, 250, 'emptyBlock');
     this.redPotions.create(100, 200, 'red');
-    this.tasteIt = this.add.text(20, 140, `Enjoy your drink :)`);
+    this.tasteIt = this.add.text(30, 140, `You need energy`);
 
     
-    platforms.create(400, 250, 'emptyBlock');
+    platforms.create(400, 250, 'emptyBlock')
     this.bluePotions.create(400, 200, 'blue');
+    this.add.text(320 , 140, 'Use it to survive');
     
     platforms.create(724, 200, 'emptyBlock');
     platforms.create(650, 150, 'redBlockEmpty');
+    this.add.text(600 , 100, `Don't touch`);
     platforms.create(724, 50, 'emptyBlock');
     this.redPotions.create(724, 0, 'red');
     platforms.create(600, 0, 'emptyBlock');
@@ -96,10 +97,10 @@ export default {
     platforms.create(400, -100, 'emptyBlock');
     platforms.create(376, -100, 'emptyBlock');
     platforms.create(376, -260, 'redBlockEmpty');
-    this.add.text(310, -340, `Pay to proceed`);
+    
     platforms.create(376, -420, 'emptyBlock');
-    this.add.text(310, -500, `To be continued...`);
-
+    this.add.text(310, -520, `It ends here...`);
+   
     player = this.physics.add.sprite(400, 450, 'hanna');
 
     player.setSize(32, 50).setOffset(8, 3).setDepth(1);
@@ -265,7 +266,7 @@ export default {
   }, this);
     this.events.on('addRed', function () {
 
-      if (this.redPotionsCollected === 1) {
+      if (this.redPotionsCollected === 2) {
         this.tasteIt.setText(`Do you like it?`)
       }
       this.redInfo.setText(`${this.redPotionsCollected}`)
@@ -278,7 +279,8 @@ export default {
         this.textures.remove(`particle-red-${prevRed}`)
       }
       const nextRed= this.redPotionsCollected - 1;
-      
+      player.tint = "0xfa0e20";
+      this.time.delayedCall(200, () =>{player.tint = 0xFFFFFF}, [], this);
       if(nextRed > 0) {
         this.textures.generate(`particle-red-${nextRed}`, {
           data: ['3'],
@@ -327,14 +329,13 @@ export default {
   }, this);
     this.events.on('addBlue', function () {
 
-      if (this.bluePotionsCollected === 1) {
-        this.add.text(300 , 140, 'If you loose them you die!');
-      }
+      
       this.blueInfo.setText(`${this.bluePotionsCollected}`)
       this.scoreInfo.setText(`Score: ${this.score}`);
 
     }, this);
     this.events.on('removeBlue', function () {
+      
       const prevBlue = this.bluePotionsCollected;
       console.log(prevBlue)
       if (prevBlue > 0) {
@@ -342,6 +343,8 @@ export default {
         this.textures.remove(`particle-blue-${prevBlue}`)
       }
       const nextBlue= prevBlue- 1;
+      player.tint = "0x5fcde4";
+      this.time.delayedCall(200, () =>{player.tint = 0xFFFFFF}, [], this);
       
       if (nextBlue > 0 ) {
         this.textures.generate(`particle-blue-${nextBlue}`, {
