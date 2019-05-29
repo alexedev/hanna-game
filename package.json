@@ -7,7 +7,8 @@
   "scripts": {
     "start": "parcel index.html",
     "lint": "tsc --noEmit",
-    "ship": "rm -rf dist && parcel build index.html --no-source-maps --public-url ./ && surge --domain https://hanna.surge.sh dist && rm -rf dist"
+    "surge": "rm -rf dist && parcel build index.html --no-source-maps --public-url ./ && surge --domain https://hanna.surge.sh dist && rm -rf dist",
+    "itch": "rm -rf dist && parcel build index.html --no-source-maps --public-url ./ && zip -r hanna.zip dist && rm -rf dist && butler push hanna.zip alexedev/hanna:html && rm hanna.zip"
   },
   "devDependencies": {
     "parcel": "^1.12.3",
